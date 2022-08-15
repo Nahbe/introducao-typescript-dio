@@ -25,3 +25,25 @@ Requisitos técnico:
 Os commits foram feitos de tal forma que o usuário pode ler commit e commit em ordem de publicação e acompanhar gradualmente a cria do repositório e a lógica aplicada. É recomendado que o primeiro estudo seja feito dessa forma. Pequenos erros nos comentários ou de gramática podem ser encontrados no caminho (consequências do programador que estuda de madrugada) mas eles já foram devidamente  corrigidos na última versão do main.
 
 ## Estrutura do repositório 
+* *src*
+  * Contém arquivos com exemplos de uso de TS e JS comentados para facilitar o entendimento da ferramenta
+* *desafios*
+  * Contém vários arquivos JS que podem ser refatorados para solidificar o conhecimento adquirido na aula
+* *index.html*
+  * É onde está a chamada para o arquivo app.js e pode ser manipulado a vontade para testarem seus scripts
+* *tsconfig.json*
+  * O coração do TS que configura suas funcionalidades
+* *package.json*
+  * Nesse arquivo foram colocados alguns scripts com o propósito de facilitar a vida de quem usar esse repositório
+* *start*
+  * Inicia o *liter-server*, que vai executar modificações no index.html e em seus arquivos importados. É útil caso queira fazer testes no Browser. A porta disposta normalmente é a *localhost:3000*
+* *watch*
+  * Roda o *tsc --watch* com o propósito de compilar constantemente qualquer coisa que for editada nos arquivos TS para sua contraparte em JS. Esse comando evita que *tsc* tenha que ser digitado constantemente para fazer a compilação.
+
+## Sobre como testar
+* *Teste mão livre*
+  * Faça suas alterações em src/app.ts
+  * Rode *tsc* ou *npm watch* para compilar elas para o arquivo dist/app.js
+  * Caso queira fazer um teste interagindo com o DOM, altere o index.html
+  * Rode o npm start e acesse o localhost:3000
+  * Testar alguns dos arquivos da pasta de exemplos ou desafios
